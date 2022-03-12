@@ -151,29 +151,12 @@
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-scm-plugin</artifactId>
-				<version>1.8.1</version>
-				<dependencies>
-					<dependency>
-						<groupId>org.apache.maven.scm</groupId>
-						<artifactId>maven-scm-provider-tfs</artifactId>
-						<version>1.8.1</version>
-					</dependency>
-				</dependencies>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-release-plugin</artifactId>
 				<version>2.4.1</version>
-				<dependencies>
-					<dependency>
-						<groupId>org.apache.maven.scm</groupId>
-						<artifactId>maven-scm-provider-tfs</artifactId>
-						<version>1.8.1</version>
-					</dependency>
-				</dependencies>
 				<configuration>
+					<!--
 					<workingDirectory>C:\releases\MavenPlugins\iib-maven-plugin</workingDirectory>
+					-->
 				</configuration>
 			</plugin>
 			<plugin>
@@ -271,14 +254,6 @@
 	</profiles>
 	<repositories>
 		<repository>
-			<id>central</id>
-			<name>Central Repository</name>
-			<url>RepoPath/url>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-		</repository>
-		<repository>
 			<id>JBoss3rdParty</id>
 			<name>JBoss3rdParty</name>
 			<url>https://repository.jboss.org/nexus/content/repositories/thirdparty-releases/</url>
@@ -286,33 +261,13 @@
 				<enabled>false</enabled>
 			</snapshots>
 		</repository>
-		<repository>
-			<id>centralImage</id>
-			<name>Central Repository</name>
-			<url>http://repo1.maven.org/maven2/</url>
-		</repository>
 	</repositories>
-	<pluginRepositories>
-		<pluginRepository>
-			<id>central</id>
-			<name>Central Repository</name>
-			<url>RepoPath</url>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-		</pluginRepository>
-	</pluginRepositories>
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
 				<groupId>junit</groupId>
 				<artifactId>junit</artifactId>
 				<version>4.11</version>
-			</dependency>
-			<dependency>
-				<groupId>org.apache.maven.scm</groupId>
-				<artifactId>maven-scm-provider-tfs</artifactId>
-				<version>1.8.1</version>
 			</dependency>
 			<dependency>
 				<groupId>org.apache.maven.plugins</groupId>
